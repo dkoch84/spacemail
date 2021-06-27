@@ -1,0 +1,2 @@
+newman run finalspace.json -n 2 -r json-summary --reporter-summary-json-export export/job1.json
+newman run finalspaceerror.json -n 2 -r json-summary --reporter-summary-json-export export/job2.json

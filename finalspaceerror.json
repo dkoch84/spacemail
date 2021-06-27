@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "e970cf39-5898-4e59-ad92-7714497ef395",
+		"name": "Final Space Errors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Base URL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalspaceapi.com/api/v0/",
+					"protocol": "https",
+					"host": [
+						"finalspaceapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalspaceapi.com/api/v0/character",
+					"protocol": "https",
+					"host": [
+						"finalspaceapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"character"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Episode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Chapter 1\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalspaceapi.com/api/v0/episode",
+					"protocol": "https",
+					"host": [
+						"finalspaceapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"episode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Earth\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalspaceapi.com/api/v0/location",
+					"protocol": "https",
+					"host": [
+						"finalspaceapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalspaceapi.com/api/v0/quote",
+					"protocol": "https",
+					"host": [
+						"finalspaceapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"quote"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
