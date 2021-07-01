@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e970cf39-5898-4e59-ad92-7714497ef395",
+		"_postman_id": "8e1a7c7c-595f-4141-89b9-aa8ab0276b3c",
 		"name": "Final Space Errors",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -16,7 +16,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Response time is less than 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -52,8 +52,8 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Response time is less than 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"pm.test(\"Response time is less than 100ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -80,6 +80,46 @@
 			"response": []
 		},
 		{
+			"name": "Characters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Gary\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalspaceapi.com/api/v0/characters",
+					"protocol": "https",
+					"host": [
+						"finalspaceapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Episode",
 			"event": [
 				{
@@ -90,7 +130,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Response time is less than 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"Chapter 1\");",
@@ -129,8 +169,8 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Response time is less than 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"pm.test(\"Response time is less than 50ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(50);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"Earth\");",
@@ -170,7 +210,44 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Response time is less than 200ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(900);",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://finalspaceapi.com/api/v0/quotes",
+					"protocol": "https",
+					"host": [
+						"finalspaceapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"quotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quotes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
 							"});"
 						],
 						"type": "text/javascript"
