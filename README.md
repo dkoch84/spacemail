@@ -21,4 +21,11 @@ To regenerate the test output that's already here (job\*.json)
 parallel -j 2 < jobs
 ```
 
+You can generate any number of jobs by using the following:
+```bash
+# create 20 jobs
+./jobber.sh -c 20
+```
+
+
 The generated output follows the schema of the [**JSON Summary Newman Reporter**](https://github.com/spenceclark/newman-reporter-json-summary#readme)
